@@ -111,6 +111,9 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav.scrolled {
   background: #000 url(../images/broken_noise.png) repeat;
   top: -82px;
+ 
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .fh5co-nav.scrolled {
@@ -275,12 +278,10 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header {
   min-height: 100vh;
   height: auto;
-  background-position: center center;
+  
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
-
 
   background-image: url(../images/background.jpg);
   
@@ -288,20 +289,10 @@ h1, h2, h3, h4, h5, h6, figure {
   /* padding: 10em 0;  */
   /* adds visible space vertically */
 
+
+  /* background-position: center center !important; */
+
 }
-
-
-
-
-
-#fh5co-header {
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-
-
 
 
 
@@ -311,6 +302,10 @@ h1, h2, h3, h4, h5, h6, figure {
     background-attachment: scroll;
   }
 }
+
+
+
+
 #fh5co-header .overlay {
   z-index: 0;
   position: absolute;
@@ -1428,7 +1423,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   padding: 75px 40px 40px 40px;
   overflow-y: auto;
-
+  
   
   display: block;
   visibility: hidden;
@@ -1444,6 +1439,12 @@ h1, h2, h3, h4, h5, h6, figure {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+.offcanvas #fh5co-offcanvas {
+  visibility: visible;
+  pointer-events: auto;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #fh5co-offcanvas {
     background: #000 url(../images/broken_noise.png) repeat;
@@ -1454,18 +1455,12 @@ h1, h2, h3, h4, h5, h6, figure {
     display: block;
   }
 }
-
-
-
 .offcanvas #fh5co-offcanvas {
   -moz-transform: translateX(0px);
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   -o-transform: translateX(0px);
   transform: translateX(0px);
-
-  visibility: visible;
-  pointer-events: auto;
 }
 #fh5co-offcanvas a {
   color: rgba(255, 255, 255, 0.5);
@@ -1571,7 +1566,8 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 25px !important;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #444;
+  background-color: #fff !important;
+  transform-origin: center;
 }
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
   outline: none;
