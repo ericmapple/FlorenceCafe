@@ -295,10 +295,10 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 #fh5co-header {
-  background-position: center 40%;  /* adjust vertical focus */
-  background-size: cover;
+  background-size: cover !important;
+  background-position: center center !important;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  width: 100%;
 }
 
 
@@ -1428,7 +1428,13 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   padding: 75px 40px 40px 40px;
   overflow-y: auto;
-  display: none;
+
+  
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+
+
   -moz-transform: translateX(270px);
   -webkit-transform: translateX(270px);
   -ms-transform: translateX(270px);
@@ -1448,12 +1454,18 @@ h1, h2, h3, h4, h5, h6, figure {
     display: block;
   }
 }
+
+
+
 .offcanvas #fh5co-offcanvas {
   -moz-transform: translateX(0px);
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   -o-transform: translateX(0px);
   transform: translateX(0px);
+
+  visibility: visible;
+  pointer-events: auto;
 }
 #fh5co-offcanvas a {
   color: rgba(255, 255, 255, 0.5);

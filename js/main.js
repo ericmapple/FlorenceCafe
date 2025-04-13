@@ -229,24 +229,26 @@
 
 	var sliderMain = function() {
 		
-	  	$('#fh5co-slider-wrap .flexslider').flexslider({
+		$('#fh5co-slider-wrap .flexslider').flexslider({
 			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
+			slideshow: true,
+			slideshowSpeed: 4000, // 4 seconds
+			animationSpeed: 800,
+			directionNav: false,
+			controlNav: true,
 			start: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
+			  setTimeout(function(){
+				$('.slider-text').removeClass('animated fadeInUp');
+				$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			  }, 500);
 			},
 			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
+			  setTimeout(function(){
+				$('.slider-text').removeClass('animated fadeInUp');
+				$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			  }, 500);
 			}
-
-	  	});
+		  });
 
 	  	$('#fh5co-slider-wrap .flexslider .slides > li').css('height', $(window).height());	
 	  	$(window).resize(function(){
